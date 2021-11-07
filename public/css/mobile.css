@@ -1,0 +1,803 @@
+@media (max-width: 992px) { 
+    /* Awal Navbar */
+#Header-TokoMusi a{
+    font-weight: bold;
+    text-decoration: none;
+}
+#Header-TokoMusi .bg-header{
+    width: 100%;
+    height: auto;
+    border: 0.2px;
+    border-color: #D7981F;
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+    margin-top: 10px;
+}
+#Header-TokoMusi h1{
+    color: rgb(67, 67, 67);
+    font-size: 38px;
+    font-family: poppins;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px gray;
+}
+#Header-TokoMusi h1:hover{
+    color: #D7981F;
+    font-size: 38px;
+    font-family: poppins;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px gray;
+}
+#Header-TokoMusi span{
+    color: red;
+    font-size: 35px;
+    font-family: poppins;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px gray;
+}
+#Header-TokoMusi span:hover{
+    color: #D7981F;
+    font-size: 35px;
+    font-family: poppins;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px gray;
+}
+#Header-TokoMusi .pencarian{
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+    margin: 15px;
+}
+#Header-TokoMusi .fa-cart-plus,
+#Header-TokoMusi .fa-bell{
+    color: #D7981F;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px gray;
+    margin: 15px 5px 5px -1px;
+}
+#Header-TokoMusi .btn-warning{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    background-color: #D7981F;
+    box-shadow: 3px 2px 1px gray;
+    margin: 15px 5px 5px -1px;
+}
+#Header-TokoMusi .btn-warning:hover{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    background-color: #fdba3e;
+    box-shadow: 3px 2px 1px gray;
+    margin: 15px 5px 5px -1px;
+}
+#Header-TokoMusi .btn-outline-warning{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    box-shadow: 3px 2px 1px gray;
+    margin: 15px 5px 25px -1px;
+}
+#Header-TokoMusi .btn-outline-warning:hover{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    background-color: #D7981F;
+    box-shadow: 3px 2px 1px gray;
+    margin: 15px 5px 25px -1px;
+}
+#Banner .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: left;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 6rem;
+    list-style: none;
+  }
+  
+#Banner .carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: gray;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity 0.6s ease;
+  }
+#Banner .fa-chevron-circle-left{
+    font-size: 50px;
+    margin-left: -9rem;
+    color: gray;
+}
+#Banner .fa-chevron-circle-right{
+    font-size: 50px;
+    margin-left: 9rem;
+    color: gray;
+}
+#Banner .bg-banner{
+    width: 100%;
+    height: auto;
+    background-color: #EFEFEF;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+    margin-top: 50px;
+}
+#Banner .bg-banner h1{
+    margin-top: 30px;
+    font-family: poppins;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px white;
+}
+#Banner .bg-banner span,
+#Spesifikasi-Product .content span,
+#Deskripsi-Product .content span{
+    font-size: 35px;
+    font-family: sansita;
+    font-weight: lighter;
+    text-shadow: 3px 2px 1px white;
+}
+#Banner img{
+    width: 100%;
+    height: auto;
+}
+#Banner .btn-warning{
+    color: white;
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 2px 1px gray;
+}
+/* Akhir Banner */
+
+/* Awal Produk Kategori */
+#Product-Category a,
+#Category-Promo a,
+#Product-Terlaris a,
+#Flash-Deals a,
+#Label a,
+#Footer a {
+    color: black;
+    text-decoration: none;
+}
+#Product-Category .bg-category{
+    width: 100%;
+    height: auto;
+    background-color: #EFEFEF;
+}
+#Product-Category h1,
+#Category-Promo h1,
+#Product-Terlaris h1,
+#Flash-Deals h1,
+#History-Transaksi h1,
+#Halama_Login h1{
+    font-family: poppins;
+    font-size: 35px;
+    text-shadow: 3px 2px 1px white;
+}
+#Product-Category span,
+#Category-Promo span,
+#Product-Terlaris span,
+#Flash-Deals span,
+#History-Transaksi span,
+#Halaman-Login span{
+    font-family: poppins;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 3px 2px 1px white;
+}
+#Product-Category img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+/* Akhir Product Category */
+
+/* awal Category Promo */
+#Category-Promo img{
+    width: 100%;
+    height: auto;
+}
+/* Akhir Category Promo */
+
+/* Awal Product Terlaris */
+#Product-Terlaris .bg-isi,
+#Premium-Product .bg-isi{
+    width: 100%;
+    /* height: 226px; */
+    border: 0.3px;
+    border-style: solid;
+    border-color: #D7981F;
+}
+#Product-Terlaris img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+#Product-Terlaris  h3{
+    font-size: 18px;
+}
+#Product-Terlaris hr,
+#Premium-Product hr{
+    border: 0.1px;
+    width: 215px;
+    border-style: solid;
+    border-color: #D7981F;
+}
+#Product-Terlaris  .bg-isi h6{
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+#Product-Terlaris  .bg-isi span{
+    font-size: 18px;
+    margin-top: 6px;
+}
+#Product-Terlaris .btn-warning{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #D7981F;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+}
+#Product-Terlaris .btn-warning:hover{
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #ffad16;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+}
+/* Akhir Produk Terlaris */
+
+/* Awal Flash Deal */
+#Flash-Deals .bg-FlashDeals{
+    width: 100%;
+    height: auto;
+    background-color: #EFEFEF;
+    margin-top: 50px;
+}
+#Flash-Deals h3{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    font-size: 25px;
+}
+#Flash-Deals .bg-isi{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 2px 1px grey;
+    object-fit: cover;
+}
+#Flash-Deals img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 1px grey;
+    object-fit: cover;
+}
+#Flash-Deals  .bg-isi h6{
+    font-size: 25px;
+    font-weight: lighter;
+}
+#Flash-Deals  .bg-isi span{
+    font-size: 30px;
+}
+#Flash-Deals .btn-warning,
+#Metode-Pembayaran .btn-warning{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #D7981F;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+}
+#Flash-Deals .btn-warning:hover,
+#Metode-Pembayaran .btn-warning:hover{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ffad16;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+}
+/* Akhir Flash-Deals */
+
+/* Awal Label */
+#Label .breadcrumb{
+    margin-top: 50px;
+    background-color: white;
+    font-family: poppins;
+}
+#Label .breadcrumb i{
+    font-size: 22px;
+    color: #F57C00;
+}
+#Label .label{
+    color: black;
+    font-weight: bold;
+}
+#Label hr,
+#Keranjang hr,
+#History-Transaksi hr{
+    border: 0.1px;
+    width: 100%;
+    border-style: solid;
+    border-color: #D7981F;
+}
+/* Akhir Label */
+
+/* Awal Premuim Product */
+#Premium-Product .premium h1{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: poppins;
+    text-shadow: 3px 2px 1px white;
+}
+#Premium-Product .product,
+#Premium-Product .premium h2{
+    font-size: 35px;
+    font-weight: normal;
+}
+#Premium-Product .premium span{
+    font-size: 35px;
+    font-family: poppins;
+    text-shadow: 3px 2px 1px white;
+}
+#Premium-Product .bg-isi img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+#Premium-Product h3{
+    font-size: 20px;
+}
+#Premium-Product h6{
+    font-size: 12px;
+}
+#Premium-Product span{
+    font-size: 14px;
+    font-weight: bold;
+}
+#Premium-Product .btn-warning{
+    width: 100%;
+    height: auto;
+    background-color: #D7981F;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+}
+#Premium-Product .btn-warning:hover{
+    width: 100%;
+    height: auto;
+    background-color: #ffad16;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12   px;
+}
+/* Akhir Premium Product */
+
+/* Awal Details Product */
+#Details-Product  .bg-details{
+    width: 100%;
+    height: auto;
+    background-color: #EBEAE7;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px grey;
+}
+#Details-Product img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+#Details-Product .nama h1{
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#Details-Product .harga h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+#Details-Product .stok h6{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#Details-Product .btn-warning{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: #D7981F;
+    box-shadow: 3px 2px 1px gray;
+    margin-top: 30px;
+}
+#Details-Product .btn-warning:hover{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: #fdba3e;
+    box-shadow: 3px 2px 1px gray;
+    margin-top: 30px;
+}
+#Details-Product .btn-outline-warning{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 3px 2px 1px gray;
+    margin-top: 30px;
+}
+#Details-Product .btn-outline-warning:hover{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: #D7981F;
+    box-shadow: 3px 2px 1px gray;
+    margin-top: 30px;
+}
+/* Akhir Details Product */
+
+/* Awal Spesifikasi-Product */
+#Spesifikasi-Product .bg-spesifikasi,
+#Deskripsi-Product .bg-deskripsi,
+#Ulasan-Product .bg-ulasan{
+    width: 100%;
+    height: auto;
+    background-color: #ECECEC;
+    box-shadow: 3px 2px 1px gray;
+}
+#Spesifikasi-Product .content h1,
+#Deskripsi-Product .content h1,
+#Keranjang .keranjang h1,
+#Metode-Pembayaran h1{
+    font-weight: bold;
+    font-size: 35px;
+    font-family: poppins;
+    text-shadow: 3px 2px 1px white;
+    margin-top: 100px;
+}
+#Spesifikasi-Product .kondisi li{
+    list-style: none;
+    font-size: 22px;
+    font-family: poppins;
+}
+#Spesifikasi-Product .keterangan li{
+    list-style: none;
+    font-size: 22px;
+    font-family: poppins;
+    font-weight: bold;
+    margin-left: 30px;
+}
+/* Akhir Spesifikasi */
+
+/* Awal Deskripsi Product */
+
+/* Akhir Deskripsi Product */
+
+/* Awal Ulasan */
+#Ulasan-Product .ulasan img{
+    width: 100%;
+    height: auto;
+}
+#Ulasan-Product .komentar h6{
+    font-weight: lighter;
+}
+/* Akhir Ulasan */
+
+/* Awal Keranjang */
+#Keranjang .radio input,
+#History-Transaksi .radio input{
+    width: 30px;
+    height: 30px;
+    margin-top: 120px;
+}
+#Keranjang .bg-keranjang,
+#History-Transaksi .bg-history{
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+}
+#Keranjang .aksi img,
+#History-Transaksi .aksi img{
+    width: 100%;
+    height: auto;
+}
+#Keranjang .judul h6,
+#History-Transaksi .judul h6{
+    font-weight: bold;
+}
+#Keranjang .aksi i,
+#History-Transaksi .aksi i{
+    font-size: 45px;
+    color: orange;
+}
+#Keranjang .harga h5,
+#History-Transaksi .harga h5,
+#Alamat .alamat{
+    font-size: 18px;
+    font-family: poppins;
+}
+#Keranjang .harga span,
+#History-Transaksi .harga span{
+    font-size: 18px;
+    font-family: poppins;
+    font-weight: bold;
+}
+/* Akhir Keranjang */
+
+/* Awal Alamat */
+#Alamat input{
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+}
+/* Akhir Alamat */
+
+/* Awal Transaksi */
+#Transaksi .bg-transaksi{
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+}
+/* Akhir Transaksi */
+
+/* Awal Transakasi */
+#Transaksi .bg-transaksi{
+    border-radius: 20px;
+}
+#Transaksi label{
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
+#Transaksi input,
+#Transaksi select{
+    font-size: 15px;
+    border: none;
+    text-align: right;
+}
+#Transaksi .btn-warning{
+    color: white;
+    background-color: #D7981F;
+    border-radius: 50px;
+    font-size: 18px;
+}
+#Transaksi .btn-warning:hover{
+    color: white;
+    background-color: #fdba3e;
+    border-radius: 50px;
+    font-size: 18px;
+}
+/* Akhir Transaksi */
+
+/* Awal Metode-Pembayaran */
+#Metode-Pembayaran .bg-pembayaran{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+}
+#Metode-Pembayaran .label input{
+    border: none;
+}
+#Metode-Pembayaran .isi input{
+    border: none;
+    text-align: right;
+}
+
+/* Akhir Metode Pembayaran */
+
+/* Awala History Transaksi */
+
+/* Akhir History Transaksi */
+
+/* Awal Login */
+#Halaman-Login .bg-login,
+#Halaman-Register .bg-register{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 grey,
+    0 6px 20px 0 gray;
+    border-radius: 50px;
+}
+#Halaman-Login img,
+#Halaman-Register img{
+    width: 100%;
+    height: auto;
+}
+#Halaman-Login .login,
+#Halaman-Register .login{
+    margin: 50px;
+}
+#Halaman-Login .email,
+#Halaman-Login .password,
+#Halaman-Register .nama,
+#Halaman-Register .email,
+#Halaman-Register .notelp,
+#Halaman-Register .password{
+    font-family: sansita;
+    font-weight: bold;
+    font-size: 18px;
+}
+#Halaman-Login .lp-password{
+    font-family: sansita;
+    /* font-weight: bold; */
+    font-size: 18px;
+    color: blue;
+}
+#Halaman-Login .btn-warning,
+#Halaman-Register .btn-warning{
+    width: 200px;
+    height: auto;
+    font-size: 20px;
+    font-family: sansita;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: #D7981F;
+    color: white;
+    box-shadow: 3px 2px 1px grey;
+}
+#Halaman-Login .btn-warning:hover,
+#Halaman-Register .btn-warning:hover{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sansita;
+    border-radius: 30px;
+    background-color: #fdba3e;
+    color: white;
+    box-shadow: 3px 2px 1px grey;
+}
+}
+/* Akhir Login */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Awal Footer */
+#Footer .bg-footer{
+
+    width: 100%;
+    height: auto;
+    background-color: #D7981F;
+    border-radius: 50px;
+    margin-top: 280px;
+}
+#Footer h1{
+    color: white;
+    font-family: poppins;
+    text-shadow: 3px 2px 1px gray;
+}
+#Footer span{
+    color: white;
+    font-family: poppins;
+    text-shadow: 3px 2px 1px gray;
+    font-weight: bold;
+}
+#Footer p{
+    color: white;
+    font-size: 15px;
+    margin-top: 60px;
+}
+#Footer li, h4{
+    list-style: none;
+    color: white;
+    font-weight: 400;
+}
+#Footer .copyright h5{
+    color: white;
+    margin-top: 15px;
+}
+#Footer hr{
+    border: 0.2px;
+    border-color: white;
+    border-style: solid;
+    width: 100%;
+}
+#Footer .fa-instagram{
+    font-size: 50px;
+    color: white;
+}
+#Footer .fa-facebook-square{
+    font-size: 50px;
+    color: white;
+}
+#Footer .fa-twitter-square{
+    font-size: 50px;
+    color: white;
+}
+/* Akhir Footer */
