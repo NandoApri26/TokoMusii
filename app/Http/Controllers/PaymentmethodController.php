@@ -14,7 +14,8 @@ class PaymentmethodController extends Controller
      */
     public function index()
     {
-        //
+        $paymentMethod = PaymentMethod::all();
+        return view('paymentmethod.index', compact('paymentMethod'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PaymentmethodController extends Controller
      */
     public function create()
     {
-        //
+        return view('paymentmethod.create');
     }
 
     /**
@@ -35,7 +36,27 @@ class PaymentmethodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'bankname' =>'required | min : 3 | max : 25',
+                'accountnumber' => 'required| min : 3| max :25',
+            ],
+            [
+                'bankname.required' => 'Bank name is required',
+                'bankname.min'=> 'min 3 words',
+                'bankname.max' => ' max 25',
+                'accountnumber.required' => 'Bank name is required',
+                'accountnumber.min'=> 'min 3 words',
+                'accountnumber.max' => ' max 25',
+            ]
+        );
+        PaymentMethod::create(
+            [
+                'bank_name' => $request->bankname,
+                'account_number' => $request->accountnumber,
+            ],
+        );
+        return redirect('/paymentmethod') -> with('status', 'Added Successfully');
     }
 
     /**
@@ -55,9 +76,9 @@ class PaymentmethodController extends Controller
      * @param  \App\Models\Paymentmethod  $paymentmethod
      * @return \Illuminate\Http\Response
      */
-    public function edit(Paymentmethod $paymentmethod)
+    public function edit(PaymentMethod $paymentmethod)
     {
-        //
+        return view('paymentmethod.update', compact('paymentmethod')); 
     }
 
     /**
@@ -67,9 +88,32 @@ class PaymentmethodController extends Controller
      * @param  \App\Models\Paymentmethod  $paymentmethod
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Paymentmethod $paymentmethod)
+    public function update(Request $request, PaymentMethod $paymentmethod)
     {
-        //
+        $request -> validate(
+            [
+                'bankname' =>'required | min : 3 | max : 25',
+                'accountnumber' => 'required| min : 3| max :25',
+            ],
+            [
+                'bankname.required' => 'Bank name is required',
+                'bankname.min'=> 'min 3 words',
+                'bankname.max' => ' max 25',
+                'accountnumber.required' => 'Bank name is required',
+                'accountnumber.min'=> 'min 3 words',
+                'accountnumber.max' => ' max 25',
+            ]
+            );
+
+            PaymentMethod::where('id', $paymentmethod->id)->update(
+                [
+                   
+                    'bank_name' => $request->bankname,
+                    'account_number' => $request->accountnumber,
+                ]
+                );
+                return redirect('/paymentmethod')->with('status', 'Updated Successfully');
+                
     }
 
     /**
@@ -78,8 +122,9 @@ class PaymentmethodController extends Controller
      * @param  \App\Models\Paymentmethod  $paymentmethod
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Paymentmethod $paymentmethod)
+    public function destroy(PaymentMethod $paymentmethod)
     {
-        //
+        PaymentMethod::destroy('id', $paymentmethod->id);
+        return redirect('/paymentmethod')->with('status',' Deleted Successfully ');
     }
 }

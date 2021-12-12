@@ -79,6 +79,24 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="condition">Condition</label>
+                                <select class="form-control" id="condition" name="condition">
+                                    <!-- using FOREIGN ID -->
+                                    <option value="" placeholder="">-- Choose --</option>
+                                    <option value="new">New</option>
+                                    <option value="second">Second</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Weight</label>
+                                <input type="number" class="form-control @error('weight') is-invalid @enderror" id="weight" name="weight" placeholder="gram">
+                                @error('weight')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label for="image">Image</label>
                                 <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" id="image" placeholder="Enter image" min="0" max="100">
                                 @error('image')

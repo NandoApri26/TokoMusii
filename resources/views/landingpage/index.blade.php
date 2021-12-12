@@ -161,7 +161,7 @@
                         <div class="row text-center ">
                             <div class="col">
                                 <img src="{{asset ('img/'. $item -> image)}}" alt="Promo1">
-                                <h3>{{ $item -> product_name}}</h3>
+                                <h5><b>{{(strlen($item->product_name) > 25) ? substr ($item -> product_name, 0, 25). "..." : $item -> product_name}}</b></h5>
                             </div>
                         </div>
                         <hr>
@@ -171,10 +171,9 @@
                                     <h6>IDR <span>{{$item -> product_price}}</span></h6>
                                 </div>
                                 <div class="col-lg-6 text-center">
-                                    <a href="Detail-Product.html">
-                                        <a href="{{url('/home/'.$item -> id)}}"><div class="btn btn-warning">Lihat
+                                    <a href="{{url('/home/'.$item -> id)}}">
+                                        <div class="btn btn-warning">Lihat
                                             Details</div></a>
-                                    </a>
                                 </div>
                             </div>
                         </div>

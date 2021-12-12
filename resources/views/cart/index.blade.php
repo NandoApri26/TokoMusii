@@ -1,5 +1,5 @@
 @extends('template.master')
-@section('title','Product')
+@section('title','Cart')
 
 @section('content')
 <div class="content-wrapper">
@@ -13,7 +13,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Product</li>
+                        <li class="breadcrumb-item active">Cart</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,29 +24,30 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <a href="{{ url('/product/create')}}" class="btn btn-primary" role="button">
-                    Add Product
+                <a href="{{ url('/cart/create')}}" class="btn btn-primary" role="button">
+                    Add New Cart
                 </a>
             </div>
-
-            @if (session('status'))
-            <div class="row mt-2">
+            <div class="row">
                 <div class="col">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        {{session('status')}}
+                    <!-- status  -->
+                    @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    @endif
+                    <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
             </div>
-            @endif
-            
             <!-- /.col -->
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Product</h3>
+                        <h3 class="card-title">Cart</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -54,36 +55,24 @@
                                 <thead>
                                     <tr>
                                         <td>No</td>
-                                        <td>Category</td>
                                         <td>Product Name</td>
-                                        <td>Image</td>
-                                        <td>Product Stock</td>
-                                        <td>Product Price</td>
-                                        <td>Product Description</td>
-                                        <td>Product Review</td>
-                                        <td>Product Soldout</td>
-                                        <td>Condition</td>
-                                        <td>Weight</td>
+                                        <td>Product Quantity</td>
+                                        <td>Total Price</td>
+                                        <td>Status Check Out</td>
                                         <td>Action</td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($product as $item)
+                                    @foreach ($cart as $item)
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
-                                            <td>{{$item->category->category_name}}</td>
-                                            <td>{{(strlen($item->product_name) > 5) ? substr ($item -> product_name, 0, 5). "..." : $item -> product_name}}</td>
-                                            <td><img src="{{asset('img/'.$item->image)}}" alt="" width="50"></td>
-                                            <td>{{$item->product_stock}}</td>
-                                            <td>{{$item->product_price}}</td>
-                                            <td>{{(strlen($item->product_description) > 5) ? substr ($item -> product_description, 0, 5). "..." : $item -> product_description}}</td>
-                                            <td>{{$item->product_review}}</td>
-                                            <td>{{$item->product_soldout}}</td>
-                                            <td>{{$item->condition}}</td>
-                                            <td>{{$item->weight}}</td>
+                                            <td>{{(strlen($item->product->product_name) > 5) ? substr ($item ->product-> product_name, 0, 5). "..." : $item -> product -> product_name}}</td>
+                                            <td>{{$item->product_qty}}</td>
+                                            <td>{{$item->total_price}}</td>
+                                            <td>{{$item->status_checkout}}</td>
                                             <td>
-                                                <a href="{{url('/product/'.$item->id).'/edit'}}" class="btn btn-info">Edit</a>
-                                                <form method="POST" action="{{url('/product/'.$item->id)}}">
+                                                <a href="{{url('/cart/'.$item->id).'/edit'}}" class="btn btn-info">Edit</a>
+                                                <form method="POST" action="{{url('/cart/'.$item->id)}}">
                                                     @csrf
                                                     @method("delete")
                                                     <button type="submit" class="btn btn-danger">Delete</button>

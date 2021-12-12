@@ -62,6 +62,19 @@
                                     <label for="productdescription">Product Description</label>
                                     <input type="text" class="form-control" name="productdescription" id="productdescription" placeholder="Enter your description" value="{{$product->product_description}}">
                                 </div>
+                                <div class="form-group">
+                                    <label for="condition">Condition</label>
+                                    <select class="form-control" id="condition" name="condition" value="{{$product->condition}}">
+                                    <!-- using FOREIGN ID -->
+                                    <option value="" placeholder="">-- Choose --</option>
+                                    <option value="new">New</option>
+                                    <option value="second">Second</option>
+                                </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="weight">Weight</label>
+                                    <input type="number" class="form-control" name="weight" id="weight" placeholder="Gram" value="{{$product->weight}}">
+                                </div>
                                     <div class="form-group">
                                     <label for="image">Image</label>
                                     <input type="file" class="form-control" name="image" id="image" placeholder="Enter image" min="0" max="100" value="{{$product->image}}">

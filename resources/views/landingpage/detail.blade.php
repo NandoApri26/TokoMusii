@@ -1,5 +1,5 @@
 @extends('frontend.master')
-@section('title', 'Detail Product')
+@section('title', 'Detail Product || TokoMusi')
 
 @section('content')
 <!-- Awal Label -->
@@ -41,17 +41,12 @@
                         <h3>IDR {{$product -> product_price}}</h3>
                     </div>
                 </div>
-                <div class="row mt-2 kuantitas">
-                    <div class="col btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group mr-2 kuantitas" role="group">
-                            <button type="button" class="btn
-                                        btn-outline-secondary">-</button>
-                            <button type="button" class="btn
-                                        btn-outline-secondary">1</button>
-                            <button type="button" class="btn
-                                        btn-outline-secondary">+</button>
-                        </div>
-                    </div>
+                <form action="{{url('/keranjang')}}" method="POST">
+                    @csrf
+                    <!-- ID di hidden -->
+                    <input type="hidden" name="product_id" id="product_id" value="{{$product -> id}}">
+                <div class="row mt-2 ml-1 kuantitas">
+                    <input type="number" id="kuantitas" name="kuantitas" min="0" max="1000" value="0">
                 </div>
                 <div class="row stok">
                     <div class="col">
@@ -60,11 +55,11 @@
                 </div>
                 <div class="row tombol">
                     <div class="col-lg-4 mb-5">
-                        <a href="Keranjang.html">
-                            <div class="btn btn-outline-warning">Tambah ke keranjang <i class="fa fa-cart-plus"></i>
-                            </div>
-                        </a>
+                        <button class="btn btn-outline-warning" type="submit">Tambah ke keranjang <i class="fa fa-cart-plus"></i>
+                        </button>
                     </div>
+                    <!-- Tutup Form -->
+                </form>
                     <div class="col-lg-3 mb-5">
                         <a href="Metode-Pembayaran.html">
                             <div class="btn btn-warning">Beli sekarang <i class="fa fa-long-arrow-right"></i>
@@ -94,8 +89,8 @@
                     <li>Kategori</li>
                 </div>
                 <div class="col-10 mt-lg-3 keterangan">
-                    <li>Baru</li>
-                    <li>1.1101 gram</li>
+                    <li>{{$product -> condition}}</li>
+                    <li>{{$product -> weight}} gram</li>
                     <li>{{$product -> category -> category_name}}</li>
                 </div>
             </div>

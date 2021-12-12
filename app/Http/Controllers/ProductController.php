@@ -38,6 +38,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         $request->validate(
             [
                 'categoryid' => 'required',
@@ -45,7 +46,9 @@ class ProductController extends Controller
                 'image' => 'required',
                 'productstock' => 'required',
                 'productprice' => 'required',
-                'productdescription' => 'required|min:2|max:1000'
+                'condition' => 'required',
+                'weight' => 'required',
+                'productdescription' => 'required|min:2'
             ],
             [
                 'productname.required' => 'Product Name harus di isi',
@@ -56,7 +59,7 @@ class ProductController extends Controller
                 'productprice.required' => 'Product price harus di isi',
                 'productdescription.required' => 'Product description harus di isi',
                 'productdescription.min' => 'Kolom ini tidak boleh kurang dari 20 kata',
-                'productdescription.max' => 'Kolom ini tidak boleh lebih dari 1000 kata',
+                'productdescription.max' => 'Kolom ini tidak boleh lebih dari 1500 kata',
 
             ]
         );
@@ -73,7 +76,9 @@ class ProductController extends Controller
                 "product_price" => $request->productprice,
                 "product_description" => $request->productdescription,
                 "product_soldout" => 0,
-                "product_review" => 0
+                "product_review" => 0,
+                "condition" => $request->condition,
+                "weight" => $request->weight
             ]
         );
         return redirect('/product');
@@ -112,6 +117,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        // return $request;
         if($request ->image !=null){
             $img = $request->file('image'); //mengambil dari form
             $filename = time() . "_" . $img->getClientOriginalName();
@@ -124,6 +130,8 @@ class ProductController extends Controller
                     "image" => $filename,
                     "product_price" => $request->productprice,
                     "product_description" => $request->productdescription,
+                    'condition' => $request->condition,
+                    'weight' => $request->weight,
                     "product_soldout" => 0,
                     "product_review" => 0
                 ]
@@ -137,7 +145,9 @@ class ProductController extends Controller
                 "product_stock" => $request->productstock,
                 "product_price" => $request->productprice,
                 "product_description" => $request->productdescription,
-                "sold_out" => 0,
+                'condition' => $request->condition,
+                'weight' => $request->weight,
+                "product_soldout" => 0,
                 "product_review" => 0
             ]
             );
